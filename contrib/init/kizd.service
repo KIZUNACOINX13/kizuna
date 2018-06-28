@@ -1,0 +1,26 @@
+[Unit]
+Description=Kiz's distributed currency daemon
+After=network.target
+
+[Service]
+User=kiz
+Group=kiz
+
+Type=forking
+PIDFile=/var/lib/kizd/kizd.pid
+
+ExecStart=/usr/bin/kizd -daemon -pid=/var/lib/kizd/kizd.pid \
+          -conf=/etc/kiz/kiz.conf -datadir=/var/lib/kizd
+
+ExecStop=-/usr/bin/kiz-cli -conf=/etc/kiz/kiz.conf \
+         -datadir=/var/lib/kizd stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

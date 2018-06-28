@@ -1,0 +1,26 @@
+# /etc/conf.d/kizd: config file for /etc/init.d/kizd
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/kiz/kiz.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/kizd"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/kizd.pid"
+
+# Where to write kizd data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/kizd"
+
+# User and group to own kizd process
+#BITCOIND_USER="kiz"
+#BITCOIND_GROUP="kiz"
+
+# Path to kizd executable
+#BITCOIND_BIN="/usr/bin/kizd"
+
+# Nice value to run kizd under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""
