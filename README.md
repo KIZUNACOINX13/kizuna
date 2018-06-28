@@ -1,14 +1,14 @@
-Kizuna Core 1.0.0.1
+Kizuna Core 1.0.0.3
 =================================================
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/kizcoin/kiz/master/doc/bitcoin_logo_doxygen.png" width="256" />
+  <img src="https://github.com/KIZUNACOINX13/kizuna/raw/master/doc/bitcoin_logo_doxygen.png" width="256" />
 </p>
 
 ## Links:
 
 - Website: https://www.kizunacoin.io
-- Explorer: http://explore.kizcoin.io/
+- Explorer: http://explorer.kizcoin.io/
 - Github: https://github.com/KIZUNACOINX13/
 
 
