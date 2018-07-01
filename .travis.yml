@@ -37,6 +37,8 @@ install:
     - if [ -n "$PACKAGES" ]; then travis_retry sudo apt-get update; fi
     - if [ -n "$PACKAGES" ]; then travis_retry sudo apt-get install --no-install-recommends --no-upgrade -qq $PACKAGES; fi
 before_script:
+    - chmod 764  depends/config.guess
+    - chmod 764  depends/config.sub
     - unset CC; unset CXX
     - if [ "$CHECK_DOC" = 1 ]; then contrib/devtools/check-doc.py; fi
     - mkdir -p depends/SDKs depends/sdk-sources
