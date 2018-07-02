@@ -7,7 +7,7 @@ Kizuna Core 1.0.0.3
 
 ## Links:
 
-- Website: https://www.kizunacoin.io
+- Website: http://www.kizunacoin.net
 - Explorer: http://explorer.kizcoin.io/
 - Github: https://github.com/KIZUNACOINX13/
 
