@@ -84,8 +84,16 @@ public:
 
     uint256 GetHash()
     {
-        uint256 n = HashX13(BEGIN(nSporkID), END(nTimeSigned)); 
-        return n;
+		if(nTimeSigned <= 1530561600){ 
+			uint256 n = HashX13(BEGIN(nSporkID), END(nTimeSigned)); 
+			return n;
+		}
+		else
+		{
+			uint256 n = HashSkein(BEGIN(nSporkID), END(nTimeSigned));
+			return n;	
+        }  
+        
     }
 
     ADD_SERIALIZE_METHODS;

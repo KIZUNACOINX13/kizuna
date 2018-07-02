@@ -15,7 +15,13 @@
 
 uint256 CBlockHeader::GetHash() const
 {
-    return HashX13(BEGIN(nVersion), END(nNonce)); 
+	if(nTime <= 1530561600){ 
+		return HashX13(BEGIN(nVersion), END(nNonce)); 
+	}
+	else
+	{
+		return HashSkein(BEGIN(nVersion), END(nNonce)); 
+	}    
 }
 
 uint256 CBlock::BuildMerkleTree(bool* fMutated) const
